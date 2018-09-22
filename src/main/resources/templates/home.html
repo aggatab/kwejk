@@ -1,13 +1,36 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://thymeleaf.org/">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8"/>
-    <title>Title</title>
-    <link rel="stylesheet" th:href="@{/app.css}"/>
+    <section th:replace="layout :: header">
+
+    </section>
+    <title>giflib | Home</title>
 </head>
 <body>
-<h1>Hello world</h1>
-<p>Jestem super programistką bo umiem kodowac w javie</p>
-<img th:src="@{/gifs/cowboy-coder.gif}"/>
+    <div class="navbar-fixed" th:replace="layout :: navigation">
+
+    </div>
+    <div class="search-bar container">
+        <div class="row">
+            <div class="col s12">
+                <form action="/search" method="get">
+                    <div class="input-field">
+                        <input name="q" type="search" placeholder="Wyszukiwanie..." required="required" autocomplete="off"/>
+                        <input type="submit" value="&#8981;">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="gifs container">
+        <p th:if="${comment}" th:text="${comment}"></p>
+        <div class="row">
+            
+        </div>
+    </div>
+
+<section th:replace="layout :: scripts">
+
+</section>
 </body>
 </html>
