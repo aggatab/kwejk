@@ -11,10 +11,10 @@ import java.util.List;
 public class GifRepository {
 
     private static final List<Gif> ALL_GIFS = Arrays.asList(
-            new Gif(true, "android-explosion", "Agata"),
-            new Gif(true, "ben-and-mike", "Ola"),
-            new Gif(false, "compiler-bot", "Zosia"),
-            new Gif(true, "infinite-andrew", "Karol")
+            new Gif(true, "android-explosion", "Agata", 3),
+            new Gif(true, "ben-and-mike", "Ola", 1),
+            new Gif(false, "compiler-bot", "Zosia", 2),
+            new Gif(true, "infinite-andrew", "Karol",2)
     );
 
     public Gif findByName(String name) {
@@ -39,3 +39,14 @@ public class GifRepository {
         return ALL_GIFS;
     }
 }
+//
+//    public List<Gif> getFavorites() {
+//        List<Gif> favoritesGifs = new ArrayList<>();
+//
+//        for (Gif gif : ALL_GIFS) {
+//            if (gif.getFavorite()) {
+//                favoritesGifs.add(gif);
+//            }
+//        }
+//        return favoritesGifs;
+//    }
