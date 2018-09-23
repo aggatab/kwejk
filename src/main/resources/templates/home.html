@@ -18,6 +18,7 @@
                     <input name="q" type="search" placeholder="Wyszukiwanie..." required="required" autocomplete="off"/>
                     <input type="submit" value="&#8981;">
                 </div>
+<<<<<<< HEAD
                 <div>
                     <button type="submit" formaction="/gif" class="myButton" style="
                     background: #674ea7;
@@ -30,6 +31,8 @@
 
                 </div>
 
+=======
+>>>>>>> 21be5d076a429ed0f47302adc64a97b97d33942f
             </form>
         </div>
     </div>
@@ -37,7 +40,14 @@
 <div class="gifs container">
     <p th:if="${comment}" th:text="${comment}"></p>
     <div class="row">
+<<<<<<< HEAD
 
+=======
+        <a th:each="gif : ${gifs}" class="col s12 l4">
+            <a th:href="@{'gif/' + ${gif.name}}"/>
+            <img th:src="@{'/gifs/' + ${gif.name} + '.gif'}"/>
+        </a>
+>>>>>>> 21be5d076a429ed0f47302adc64a97b97d33942f
     </div>
 </div>
 
